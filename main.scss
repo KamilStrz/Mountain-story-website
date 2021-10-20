@@ -64,7 +64,7 @@ header {
 .hamburger-menu {
     width: 60px;
     height: 60px;
-    position: absolute;
+    position: fixed;
     top: 2%;
     left: 2%;
     display: flex;
@@ -72,6 +72,7 @@ header {
     justify-content: space-between;
     align-items: flex-start;
     cursor: pointer;
+    z-index: 3;
     
     .hamburger-row {
         background-color: #fff;
@@ -118,6 +119,75 @@ header {
     .fas {
         color: #fff;
     }
+}
+
+
+
+.menu-list {
+    position: fixed;
+    left: -100%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 70px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 2;
+    transition: .4s;
+
+    .menu-rectangle {
+        height: 60px;
+        width: 6px;
+        background-color: #fff;
+    }
+    
+    .menu-dot {
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        background-color: rgb(71, 67, 67);
+    }
+
+    a {
+        display: block;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+    }
+
+    .menu-dot:hover {
+        background-color: #fff;
+    }
+
+    .menu-dot:active {
+        background-color: #fff;
+    }
+
+    .menu-dot:focus {
+        background-color: #fff;
+    }
+
+    h2 {
+        font-size: 3rem;
+        transform: rotate(90deg);
+        color: #fff;
+    }
+}
+
+.active-menu {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 70px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 2;
 }
 
 h1 {
@@ -182,6 +252,12 @@ h1 {
 main {
     //background-image: url('./img/tlo.PNG');
     background: linear-gradient(to top, rgb(132, 199, 229), #F5F5F5);
+
+    .second-article,
+    .third-article {
+        display: none;
+    }
+
     h2,
     h3,
     p {
@@ -205,6 +281,7 @@ main {
     }
 }
 
+/* === First article === */
 /* First section */
 .first-section {
     position: relative;
@@ -221,7 +298,7 @@ main {
     align-items: flex-start;
 }
 
-.imgs {
+.article-imgs {
     width: 40%;
     height: 120%;
     position: absolute;
@@ -281,6 +358,52 @@ main {
     }
 }
 
+/* === Second article === */
+/* First section */
+.article2-imgs {
+    width: 40%;
+    height: 120%;
+    position: absolute;
+    top: -120px;
+    left: 0;
+    background-image: url('./img/article2-img2.jpg');
+    background-size: cover;
+    background-position: center;
+    border: 6px solid #fff;
+}
+
+.second-article-text-content {
+    width: 45%;
+    margin-left: auto;
+    padding-right: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* === Third article === */
+.third-article-text-content {
+    width: 45%;
+    padding-left: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.article3-imgs {
+    width: 40%;
+    height: 120%;
+    position: absolute;
+    top: -120px;
+    right: 0;
+    background-image: url('./img/article3-img2.jpg');
+    background-size: cover;
+    background-position: center;
+    border: 6px solid #fff;
+}
+
 /* Section Bg-bottom */
 .bg-bottom {
     position: relative;
@@ -323,6 +446,14 @@ main {
     header {
         h1 {
             font-size: 6rem;
+        }
+
+        .line1 {
+            left: 30%;
+        }
+
+        .line2 {
+            left: 70%;
         }
     }
 
@@ -401,15 +532,21 @@ main {
         flex-wrap: wrap;
         padding-bottom: 0px;
 
-        .text-content {
-            flex-basis: 300px;
+        .text-content,
+        .second-article-text-content,
+        .third-article-text-content {
+            width: 100%;
+            margin: 0 auto;
             order: 1;
+            padding: 0 0 100px 0;
+            text-align: center;
         }
 
-        .imgs {
+        .article-imgs,
+        .article2-imgs,
+        .article3-imgs {
             position: relative;
-            width: 90%;
-            flex-basis: 300px;
+            width: 100%;
             order: 2;
             height: 300px;
             margin-top: 170px;
@@ -437,5 +574,11 @@ main {
         .bottom-logo {
             width: 60px;
         }
+    }
+}
+
+@media all and (max-width: 520px) {
+    .menu-list {
+        display: none;
     }
 }

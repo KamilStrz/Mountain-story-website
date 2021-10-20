@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="./fontsAwesome/css/all.min.css">
     <link rel="stylesheet" href="./main.css">
+
 </head>
 <body>
     <header>
@@ -18,12 +19,13 @@
                 <div class="hamburger-row2 hamburger-row"></div>
                 <div class="hamburger-row3 hamburger-row"></div>
             </div>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+            <div class="menu-list">
+                <div class="menu-rectangle"></div>
+                <h2 id="menu-number">01</h2>
+                <div class="menu-dot1 menu-dot" id="show-first-article"><a href="#first-article"></a></div>
+                <div class="menu-dot2 menu-dot" id="show-second-article"><a href="#second-article"></a></div>
+                <div class="menu-dot3 menu-dot" id="show-third-article"><a href="#third-article"></a></div>
+            </div>
         </nav>
         <div class="logo">
             <img src="./img/logo1.png" alt="">
@@ -45,17 +47,17 @@
         </div>
     </header>
     <main>
-        <section class="first-section">
+        <section class="first-section first-article" id="first-article">
             <div class="text-content">
                 <h3>mountain</h3>
                 <h2>Lorem ipsum dolor sit.</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nisi quidem dolorem, quas pariatur quae voluptatem delectus numquam, animi accusamus sit repudiandae quam, id nostrum. Necessitatibus dolor cumque fugit, ab porro soluta aliquid aperiam adipisci repellendus officiis sint itaque quibusdam rem similique totam ducimus aut enim corrupti ipsa at laboriosam! Quo, laudantium ipsam? Architecto molestiae natus obcaecati eaque! Animi temporibus ipsa, repudiandae incidunt amet nostrum.</p>
             </div>
-            <div class="imgs">
+            <div class="article-imgs">
                 <img class="section-img1" src="./img/section-img1.jpg" alt="">
             </div>
         </section>
-        <section class="second-section">
+        <section class="second-section first-article">
             <div class="content">
                 <h3>mountain</h3>
                 <h2>Lorem ipsum dolor sit.</h2>
@@ -63,6 +65,50 @@
                 <button>full story <i class="fas fa-arrow-right"></i></button>
             </div>
         </section>
+        <section class="first-section second-article" id="second-article">
+            <div class="second-article-text-content">
+                <h3>mountain</h3>
+                <h2>Lorem ipsum dolor sit.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nisi quidem dolorem, quas pariatur quae voluptatem delectus numquam, animi accusamus sit repudiandae quam, id nostrum. Necessitatibus dolor cumque fugit, ab porro soluta aliquid aperiam adipisci repellendus officiis sint itaque quibusdam rem similique totam ducimus aut enim corrupti ipsa at laboriosam! Quo, laudantium ipsam? Architecto molestiae natus obcaecati eaque! Animi temporibus ipsa, repudiandae incidunt amet nostrum.</p>
+            </div>
+            <div class="article2-imgs">
+                <img class="section-img1" src="./img/article2-img1.jpg" alt="">
+            </div>
+        </section>
+        <section class="second-section second-article">
+            <div class="content">
+                <h3>mountain</h3>
+                <h2>Lorem ipsum dolor sit.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis unde eveniet eum expedita voluptates fugit quisquam libero? Perspiciatis dolorum rerum expedita placeat odit, architecto harum quisquam delectus. Animi dolorum tempore alias fugiat id, quibusdam dignissimos, tenetur eius quaerat repudiandae aperiam, dolores voluptatum. Hic repellat nulla repudiandae odit magnam ipsam cum!</p>
+                <button>full story <i class="fas fa-arrow-right"></i></button>
+            </div>
+        </section>
+        <section class="first-section third-article" id="third-article">
+            <div class="third-article-text-content">
+                <h3>mountain</h3>
+                <h2>Lorem ipsum dolor sit.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nisi quidem dolorem, quas pariatur quae voluptatem delectus numquam, animi accusamus sit repudiandae quam, id nostrum. Necessitatibus dolor cumque fugit, ab porro soluta aliquid aperiam adipisci repellendus officiis sint itaque quibusdam rem similique totam ducimus aut enim corrupti ipsa at laboriosam! Quo, laudantium ipsam? Architecto molestiae natus obcaecati eaque! Animi temporibus ipsa, repudiandae incidunt amet nostrum.</p>
+            </div>
+            <div class="article3-imgs">
+                <img class="section-img1" src="./img/article3-img1.jpg" alt="">
+            </div>
+        </section>
+        <section class="second-section third-article">
+            <div class="content">
+                <h3>mountain</h3>
+                <h2>Lorem ipsum dolor sit.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis unde eveniet eum expedita voluptates fugit quisquam libero? Perspiciatis dolorum rerum expedita placeat odit, architecto harum quisquam delectus. Animi dolorum tempore alias fugiat id, quibusdam dignissimos, tenetur eius quaerat repudiandae aperiam, dolores voluptatum. Hic repellat nulla repudiandae odit magnam ipsam cum!</p>
+                <button>full story <i class="fas fa-arrow-right"></i></button>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
         <section class="bg-bottom">
             <img src="./img/bg-main.png" alt="">
             <img class="bottom-logo" src="./img/logo1.png" alt="">
@@ -70,5 +116,7 @@
 
         </section>
     </main>
+    
+    <script src="./script.js"></script>
 </body>
 </html>
